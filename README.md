@@ -26,44 +26,44 @@ This project involves setting up a PostgreSQL server on Google Cloud, pulling da
 
 4. Database Creation
 
-Created a database that would make querying fast easy and simple.
+Created a database that would make querying easy and not redundant.
 
 ```
-CREATE TABLE races (
-    race_id SERIAL PRIMARY KEY,
-    race_name VARCHAR(255) NOT NULL
+CREATE TABLE race (
+    id SERIAL PRIMARY KEY,
+    race VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE times (
-    time_id SERIAL PRIMARY KEY,
-    year INTEGER NOT NULL
+CREATE TABLE time_period (
+    id SERIAL PRIMARY KEY,
+    time_period VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE salaries (
-    salary_id SERIAL PRIMARY KEY,
+CREATE TABLE census_age (
     race_id INTEGER NOT NULL,
-    time_id INTEGER NOT NULL,
-    salary NUMERIC NOT NULL,
-    FOREIGN KEY (race_id) REFERENCES races(race_id),
-    FOREIGN KEY (time_id) REFERENCES times(time_id)
+    time_period_id INTEGER NOT NULL,
+    age DOUBLE PRECISION,
+    PRIMARY KEY (race_id, time_period_id),
+    FOREIGN KEY (race_id) REFERENCES race(id) ON DELETE CASCADE,
+    FOREIGN KEY (time_period_id) REFERENCES time_period(id) ON DELETE CASCADE
 );
 
-CREATE TABLE ages (
-    age_id SERIAL PRIMARY KEY,
+CREATE TABLE census_rent (
     race_id INTEGER NOT NULL,
-    time_id INTEGER NOT NULL,
-    age INTEGER NOT NULL,
-    FOREIGN KEY (race_id) REFERENCES races(race_id),
-    FOREIGN KEY (time_id) REFERENCES times(time_id)
+    time_period_id INTEGER NOT NULL,
+    rent DOUBLE PRECISION,
+    PRIMARY KEY (race_id, time_period_id),
+    FOREIGN KEY (race_id) REFERENCES race(id) ON DELETE CASCADE,
+    FOREIGN KEY (time_period_id) REFERENCES time_period(id) ON DELETE CASCADE
 );
 
-CREATE TABLE rents (
-    rent_id SERIAL PRIMARY KEY,
+CREATE TABLE census_salary (
     race_id INTEGER NOT NULL,
-    time_id INTEGER NOT NULL,
-    rent NUMERIC NOT NULL,
-    FOREIGN KEY (race_id) REFERENCES races(race_id),
-    FOREIGN KEY (time_id) REFERENCES times(time_id)
+    time_period_id INTEGER NOT NULL,
+    salary DOUBLE PRECISION,
+    PRIMARY KEY (race_id, time_period_id),
+    FOREIGN KEY (race_id) REFERENCES race(id) ON DELETE CASCADE,
+    FOREIGN KEY (time_period_id) REFERENCES time_period(id) ON DELETE CASCADE
 );
 ```
 

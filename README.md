@@ -8,7 +8,7 @@ This project involves setting up a PostgreSQL server on Google Cloud, pulling da
 1. Google Cloud PostgreSQL Server Setup:
 - Created a Google Cloud Project in the Google Cloud Console and enabled the Cloud SQL Admin API
 - Created a PostgreSQL Instance and set the region to Northern Virginia 
-- Configure the Instance with an instance ID as well as password
+- Configured the Instance with an instance ID as well as password
 - Authorized Network Access by adding my IP address to the authorized networks 
 - Connected with pgAdmin using the provided IP, username and password.
 2.  Data Sources:
@@ -18,11 +18,11 @@ This project involves setting up a PostgreSQL server on Google Cloud, pulling da
      - Census Data - Race Time Rent
      - Census Data - Race Time Salary
 
-3. Data Cleaning and Transformation
-Imported all three csv files into google sheets
-Data was cleaned and transformed using Google Sheets  ensuring consistency and usability.
-Added Null Values to where there were blanks initially 
-Exploratory data analysis to understand and relationships
+3. Data Cleaning and Transformation:
+- Imported all three csv files into google sheets
+- Data was cleaned and transformed using Google Sheets  ensuring consistency and usability.
+- Added Null Values to where there were blanks initially 
+- Exploratory data analysis to understand and relationships
 
 4. Database Creation
 

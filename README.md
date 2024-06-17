@@ -20,7 +20,7 @@ This project involves setting up a PostgreSQL server on Google Cloud, pulling da
 
 3. Data Cleaning and Transformation:
 - Imported all three csv files into google sheets
-- Data was cleaned and transformed using Google Sheets  ensuring consistency and usability.
+- Data was cleaned and transformed using Google Sheets  
 - Added Null Values to where there were blanks initially 
 - Exploratory data analysis to understand and relationships
 

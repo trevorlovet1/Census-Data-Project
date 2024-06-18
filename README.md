@@ -11,6 +11,14 @@ This project involves setting up a PostgreSQL server on Google Cloud, pulling da
 - Configured the Instance with an instance ID as well as password
 - Authorized Network Access by adding my IP address to the authorized networks 
 - Connected with pgAdmin using the provided IP, username and password.
+<br><br><br>
+
+<img width="1148" alt="image" src="https://github.com/trevorlovet1/Census-Data-Project/assets/112558354/b8d15938-16f3-4861-8534-49da8cca0def">
+
+
+<br><br><br>
+
+
 2.  Data Sources:
    - Data was sourced from [data.census.gov](https://data.census.gov).
    - The datasets used include:
